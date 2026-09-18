@@ -2,23 +2,24 @@ const Header = (props) => {
   return <h1>{props.course}</h1>
 }
 
+const Part= (props) => {
+  return (
+    <p>{props.courseSubject}: {props.units} units</p>
+  )
+}
+
 const Content = (props) => {
   return (
     <div>
-      <p>{props.s1}</p>
-      <p>Units: {props.u1}</p>
-
-      <p>{props.s2}</p>
-      <p>Units: {props.u2}</p>
-
-      <p>{props.s3}</p>
-      <p>Units: {props.u3}</p>
+      <Part courseSubject = {props.s1} units = {props.u1}/>
+      <Part courseSubject = {props.s2} units = {props.u2} />
+      <Part courseSubject = {props.s3} units = {props.u3} />
     </div>
   )
 }
 
 const Total = (props) => {
-  return <p><strong>Total Number of Units: {props.u1 + props.u2 + props.u3}</strong> </p>
+  return <p><strong>Total Number of Units: {props.u1 + props.u2 + props.u3}</strong></p>
 }
 
 const Footer = (props) => {
